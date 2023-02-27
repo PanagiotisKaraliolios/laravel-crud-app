@@ -40,18 +40,19 @@
                     <input type="text" name="name" value="{{ $user->name }}" class="form-control"
                         placeholder="Name">
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Email:</strong>
-                        <input type="email" name="email" value="{{ $user->email }}" class="form-control"
-                            placeholder="Email">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                    <button type="submit" class="btn btn-primary">Update User</button>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Email:</strong>
+                    <input type="email" name="email" value="{{ $user->email }}" class="form-control"
+                        placeholder="Email">
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Update User</button>
+            </div>
         </div>
+
     </form>
 
 @endsection

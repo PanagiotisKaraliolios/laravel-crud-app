@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::first()->paginate(5);
+        $users = User::paginate(5);
 
         return view('users.index', compact('users'))
             ->with((request()->input('page')));
@@ -46,7 +46,6 @@ class UserController extends Controller
         $user = new User([
             'name' => $request->get('name'),
             'email' => $request->get('email'),
-            'password' => $request->get('password'),
         ]);
         $user->save();
         return redirect('users')->with('success', 'User saved!');
